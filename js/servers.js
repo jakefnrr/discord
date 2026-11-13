@@ -6,8 +6,8 @@ const Servers = (() => {
     const dmActive = view && (view.type === "friends" || view.type === "dm");
     const dmUnread = Store.dmList(me.id).reduce((n, x) => n + x.unread, 0);
     let html = `
-      <button class="server-icon ${dmActive ? "active" : ""}" data-view="friends" title="Direct Messages" style="background:${dmActive ? "var(--accent)" : "var(--bg-modifier-active)"};font-size:0">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="${dmActive ? "#fff" : "var(--text)"}"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.4a18.3 18.3 0 0 1 4.7 2.3 14.6 14.6 0 0 0-12.6 0A18.3 18.3 0 0 1 12 3.4L11.8 3a19.8 19.8 0 0 0-4.9 1.4C3.2 8.6 2.5 12.7 2.9 16.7a19.9 19.9 0 0 0 6 3l.5-.8a12.8 12.8 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4a12.8 12.8 0 0 1-2 1l.5.8a19.9 19.9 0 0 0 6-3c.5-4.6-.8-8.6-4.7-12.3ZM8.7 14.3c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.1 1.1 2.1 2.4-.9 2.4-2.1 2.4Zm6.6 0c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.1 1.1 2.1 2.4-.9 2.4-2.1 2.4Z"/></svg>
+      <button class="server-icon ${dmActive ? "active" : ""}" data-view="friends" title="Direct Messages" style="background:var(--accent);font-size:0">
+        <img src="logo.png" alt="" style="width:44px;height:auto;display:block">
         ${dmUnread ? `<span class="unread-dot"></span>` : ""}
       </button>
       <div class="server-separator"></div>`;

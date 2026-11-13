@@ -1,0 +1,8 @@
+name = "discord-kv"
+main = "worker.js"
+compatibility_date = "2024-10-01"
+
+# Existing KV namespace "shared-store" (same one the Japanese app uses).
+[[kv_namespaces]]
+binding = "SHARED_KV"
+id = "d726fc2081e044f7b7ed1bc7b9b9d543"
